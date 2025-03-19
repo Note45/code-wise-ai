@@ -76237,7 +76237,7 @@ while(true)switch(s){case 0:m=q.as
 s=m.length!==0?2:3
 break
 case 2:s=4
-return A.V(A.anE(A.dr("http://localhost:8000/user-status/"+m)),$async$ov)
+return A.V(A.anE(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/user-status/"+m)),$async$ov)
 case 4:p=b
 if(p.b===200){o=B.aK.lz(B.J.dd(p.w),null)
 m=q.y
@@ -76286,7 +76286,7 @@ ab3(a,b){var s=0,r=A.R(t.H),q=this,p,o
 var $async$wb=A.S(function(c,d){if(c===1)return A.O(d,r)
 while(true)switch(s){case 0:o=t.N
 s=2
-return A.V(A.Et(A.dr("http://localhost:8000/like-prompt/"+a),null,A.ad(["Content-Type","application/json"],o,o)),$async$wb)
+return A.V(A.Et(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/like-prompt/"+a),null,A.ad(["Content-Type","application/json"],o,o)),$async$wb)
 case 2:if(d.b===200){o=q.f
 p=J.mL(o.gA(),new A.acF(a,b),t.a)
 o.w=A.a1(p,!0,p.$ti.i("ak.E"))
@@ -76298,7 +76298,7 @@ ab2(a,b){var s=0,r=A.R(t.H),q=this,p,o
 var $async$wa=A.S(function(c,d){if(c===1)return A.O(d,r)
 while(true)switch(s){case 0:o=t.N
 s=2
-return A.V(A.Et(A.dr("http://localhost:8000/dislike-prompt/"+a),null,A.ad(["Content-Type","application/json"],o,o)),$async$wa)
+return A.V(A.Et(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/dislike-prompt/"+a),null,A.ad(["Content-Type","application/json"],o,o)),$async$wa)
 case 2:if(d.b===200){o=q.f
 p=J.mL(o.gA(),new A.acE(a,b),t.a)
 o.w=A.a1(p,!0,p.$ti.i("ak.E"))
@@ -76331,7 +76331,7 @@ m.w=!0
 m.ae()
 p=t.N
 s=2
-return A.V(A.Et(A.dr("http://localhost:8000/login/"),B.aK.rY(A.ad(["email",q.ay,"password",q.ch],p,p),null),A.ad(["Content-Type","application/json"],p,p)),$async$oe)
+return A.V(A.Et(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/login/"),B.aK.rY(A.ad(["email",q.ay,"password",q.ch],p,p),null),A.ad(["Content-Type","application/json"],p,p)),$async$oe)
 case 2:o=b
 m.w=!1
 m.ae()
@@ -76352,7 +76352,7 @@ while(true)switch(s){case 0:n=q.w
 n.w=!0
 n.ae()
 s=2
-return A.V(A.anE(A.dr("http://localhost:8000/user-conversations/"+q.as)),$async$od)
+return A.V(A.anE(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/user-conversations/"+q.as)),$async$od)
 case 2:p=b
 n.w=!1
 n.ae()
@@ -76367,7 +76367,7 @@ v1(){var s=0,r=A.R(t.H),q,p=this,o,n,m,l,k
 var $async$v1=A.S(function(a,b){if(a===1)return A.O(b,r)
 while(true)switch(s){case 0:if(p.ax.length===0){p.c.a6(t.O).f.iP(A.hO(null,null,null,null,null,B.E,null,A.bd("Selecione um tema para a conversa",null,null,null,null,null,null),null,B.bn,null,null,null,null,null,null,null,null,null))
 s=1
-break}o=A.dr("http://localhost:8000/create-conversation/")
+break}o=A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/create-conversation/")
 n=p.as
 m=p.ax
 l=t.N
@@ -76394,7 +76394,7 @@ j.w=A.b([],t.H7)
 j.ae()
 q=3
 s=6
-return A.V(A.anE(A.dr("http://localhost:8000/conversation-prompts/"+a)),$async$qV)
+return A.V(A.anE(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/conversation-prompts/"+a)),$async$qV)
 case 6:m=c
 if(m.b===200){l=B.aK.lz(B.J.dd(m.w),null)
 i=A.hy(J.fH(l,"prompts"),!0,t.a)
@@ -76449,7 +76449,7 @@ i.ae()
 m.Cj()
 p=7
 s=10
-return A.V(A.Et(A.dr("http://localhost:8000/send-prompt/"),B.aK.rY(A.ad(["user_id",m.as,"conversation_id",m.at,"prompt",J.fH(l,"prompt")],g,t.X),null),A.ad(["Content-Type","application/json"],g,g)),$async$mG)
+return A.V(A.Et(A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/send-prompt/"),B.aK.rY(A.ad(["user_id",m.as,"conversation_id",m.at,"prompt",J.fH(l,"prompt")],g,t.X),null),A.ad(["Content-Type","application/json"],g,g)),$async$mG)
 case 10:k=b
 s=k.b===200?11:13
 break
@@ -76664,7 +76664,7 @@ if(J.cf(g)===0||J.cf(f)===0||J.cf(e)===0||n.r.length===0){n.c.a6(t.O).f.iP(A.hO(
 s=1
 break}n.ao(new A.agv(n))
 p=4
-k=A.dr("http://localhost:8000/register/")
+k=A.dr("http://ec2-54-161-205-136.compute-1.amazonaws.com:8000/register/")
 j=t.N
 i=A.ad(["Content-Type","application/json"],j,j)
 s=7
