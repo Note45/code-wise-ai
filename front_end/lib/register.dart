@@ -17,8 +17,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool isLoading = false;
 
   // Base URL do backend
-  // String baseUrl = 'http://localhost:8000'; // Substitua pelo seu backend
-  String baseUrl = 'https://sistema-engsoft-65e29175f699.herokuapp.com';
+  String baseUrl = 'http://localhost:8000'; // Substitua pelo seu backend
+  //String baseUrl = 'https://sistema-engsoft-65e29175f699.herokuapp.com';
 
   // Função para realizar o cadastro do usuário
   Future<void> _registerUser() async {

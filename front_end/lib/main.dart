@@ -51,19 +51,19 @@ class _ChatScreenState extends State<ChatScreen> {
   String email = '';
   String password = '';
 
-  // String baseUrl = 'http://localhost:8000'; // Substitua pelo seu backend
-  String baseUrl = 'https://sistema-engsoft-65e29175f699.herokuapp.com';
+  String baseUrl = 'http://localhost:8000'; // Substitua pelo seu backend
+  //String baseUrl = 'https://sistema-engsoft-65e29175f699.herokuapp.com';
 
   final TextEditingController _controller = TextEditingController();
 
   final Map<String, String> themes = {
-    // 'Levantamento de Requisitos': '''
-    // Dada a seguinte descrição sobre requisitos: Os requisitos de um sistema descrevem o que ele deve fazer, os serviços que oferece e as restrições aplicáveis ao seu funcionamento. Eles são divididos em Requisitos Funcionais, que especificam as ações que o sistema deve realizar, e Requisitos Não-Funcionais, que delineiam as restrições e condições sob as quais o sistema deve operar. Além disso, os requisitos podem ser classificados como de Usuário, escritos em linguagem natural e diagramas para descrever os serviços oferecidos aos usuários e suas restrições, e de Sistema, que são descrições detalhadas do funcionamento do software, incluindo suas funções, serviços e restrições.
+    'Levantamento de Requisitos': '''
+     Dada a seguinte descrição sobre requisitos: Os requisitos de um sistema descrevem o que ele deve fazer, os serviços que oferece e as restrições aplicáveis ao seu funcionamento. Eles são divididos em Requisitos Funcionais, que especificam as ações que o sistema deve realizar, e Requisitos Não-Funcionais, que delineiam as restrições e condições sob as quais o sistema deve operar. Além disso, os requisitos podem ser classificados como de Usuário, escritos em linguagem natural e diagramas para descrever os serviços oferecidos aos usuários e suas restrições, e de Sistema, que são descrições detalhadas do funcionamento do software, incluindo suas funções, serviços e restrições.
 
-    // Requisitos não-funcionais são subdivididos em três categorias: Requisitos de Produto, que abordam o desempenho do software, como a rapidez das transações; Requisitos Organizacionais, que envolvem políticas e procedimentos da organização cliente e desenvolvedora, como normas a serem seguidas; e Requisitos Externos, que são influenciados por fatores externos, como legislações e normas técnicas. Bons requisitos devem ser corretos, precisos, completos, consistentes e verificáveis, garantindo que não haja ambiguidades, que todas as funcionalidades sejam cobertas, e que seja possível testar se eles estão sendo atendidos.
+     Requisitos não-funcionais são subdivididos em três categorias: Requisitos de Produto, que abordam o desempenho do software, como a rapidez das transações; Requisitos Organizacionais, que envolvem políticas e procedimentos da organização cliente e desenvolvedora, como normas a serem seguidas; e Requisitos Externos, que são influenciados por fatores externos, como legislações e normas técnicas. Bons requisitos devem ser corretos, precisos, completos, consistentes e verificáveis, garantindo que não haja ambiguidades, que todas as funcionalidades sejam cobertas, e que seja possível testar se eles estão sendo atendidos.
 
-    // A partir dos requisitos, elaboram-se os casos de uso, que são escritos da perspectiva do ator que utilizará o sistema para alcançar um objetivo específico. Cada caso de uso inclui um fluxo normal e extensões para representar situações de erro ou variações no processo. Isso ajuda a assegurar que todas as possíveis interações e cenários de uso do sistema sejam considerados, proporcionando uma base sólida para o desenvolvimento e a verificação do software. Você será um assistente para auxiliar no levantamento de requisitos dos alunos de uma disciplina de Engenharia de Software. PROIBIDO CÓDIGO. PROIBIDO TUDO FORA DE REQUISITOS. LIMITE DE 700 TOKENS NA RESPOSTA. Resposta em português do Brasil
-    //     ''',
+     A partir dos requisitos, elaboram-se os casos de uso, que são escritos da perspectiva do ator que utilizará o sistema para alcançar um objetivo específico. Cada caso de uso inclui um fluxo normal e extensões para representar situações de erro ou variações no processo. Isso ajuda a assegurar que todas as possíveis interações e cenários de uso do sistema sejam considerados, proporcionando uma base sólida para o desenvolvimento e a verificação do software. Você será um assistente para auxiliar no levantamento de requisitos dos alunos de uma disciplina de Engenharia de Software. PROIBIDO CÓDIGO. PROIBIDO TUDO FORA DE REQUISITOS. LIMITE DE 700 TOKENS NA RESPOSTA. Resposta em português do Brasil
+    ''',
 
     // 'Arquitetura e Projeto de Software': '''
     // Dado o seguinte texto sobre padrões de projeto e arquitetura de software:
@@ -78,19 +78,19 @@ class _ChatScreenState extends State<ChatScreen> {
 
     // Você será um assistente para auxiliar na decisão de padrões de projeto e de arquitetura dos alunos de uma disciplina de Engenharia de Software. Não gere código automaticamente, apenas auxilie o aluno com exemplos para que ele consiga desenvolver sozinho. Se for perguntado algo que não seja sobre Projeto e Arquitetura de Software, responda que não é seu escopo.
     // ''',
-    'Testes': '''
+    //'Testes': '''
     
-    Dada a seguinte descrição sobre testes:
+    //Dada a seguinte descrição sobre testes:
 
-    Os testes de software são um conjunto de instruções planejadas e executadas sistematicamente para garantir que o programa funcione conforme esperado e corrigir quaisquer defeitos antes de seu uso comercial. Existem três grupos principais de testes automatizados: testes de unidade, que verificam pequenos trechos de código; testes de integração, que verificam funcionalidades completas do sistema e podem usar componentes externos; e testes de sistema, que simulam sessões de uso do sistema pelo usuário final, sendo mais caros e sensíveis a mudanças. 
+    //Os testes de software são um conjunto de instruções planejadas e executadas sistematicamente para garantir que o programa funcione conforme esperado e corrigir quaisquer defeitos antes de seu uso comercial. Existem três grupos principais de testes automatizados: testes de unidade, que verificam pequenos trechos de código; testes de integração, que verificam funcionalidades completas do sistema e podem usar componentes externos; e testes de sistema, que simulam sessões de uso do sistema pelo usuário final, sendo mais caros e sensíveis a mudanças. 
 
-    Os testes de software podem ser realizados de duas maneiras: testes caixa-preta, que avaliam se o software cumpre suas funções sem se preocupar com a estrutura interna, e testes caixa-branca, que analisam o funcionamento interno do código. Testes caixa-preta se concentram nos requisitos funcionais e podem identificar uma classe diferente de erros em comparação com os testes caixa-branca, que envolvem uma análise rigorosa da lógica do código. É essencial selecionar um número limitado de caminhos lógicos importantes para rodar os testes. 
+    //Os testes de software podem ser realizados de duas maneiras: testes caixa-preta, que avaliam se o software cumpre suas funções sem se preocupar com a estrutura interna, e testes caixa-branca, que analisam o funcionamento interno do código. Testes caixa-preta se concentram nos requisitos funcionais e podem identificar uma classe diferente de erros em comparação com os testes caixa-branca, que envolvem uma análise rigorosa da lógica do código. É essencial selecionar um número limitado de caminhos lógicos importantes para rodar os testes. 
 
-    Existem várias abordagens para ambas as filosofias de teste. Para testes caixa-branca, temos o teste do caminho básico, que avalia todos os caminhos independentes no grafo de fluxo; o teste de condição, que exercita as condições lógicas; e o teste de ciclo, que avalia os ciclos no fluxo. Para testes caixa-preta, existem o particionamento de equivalência, que divide as entradas em classes de equivalência; a análise de valor limite, que avalia entradas nas fronteiras dos domínios; e o teste de interface, que testa os elementos da interface dos componentes desenvolvidos. 
+    //Existem várias abordagens para ambas as filosofias de teste. Para testes caixa-branca, temos o teste do caminho básico, que avalia todos os caminhos independentes no grafo de fluxo; o teste de condição, que exercita as condições lógicas; e o teste de ciclo, que avalia os ciclos no fluxo. Para testes caixa-preta, existem o particionamento de equivalência, que divide as entradas em classes de equivalência; a análise de valor limite, que avalia entradas nas fronteiras dos domínios; e o teste de interface, que testa os elementos da interface dos componentes desenvolvidos. 
 
-    Você será um assistente para auxiliar na elaboração de testes dos softwares dos alunos de uma disciplina de Engenharia de Software. PROIBIDO MAIS QUE 1 FUNÇÃO DE TESTE. PROIBIDO TUDO FORA DE TESTES. LIMITE DE 700 TOKENS NA RESPOSTA. Resposta em português do Brasil
+    //Você será um assistente para auxiliar na elaboração de testes dos softwares dos alunos de uma disciplina de Engenharia de Software. PROIBIDO MAIS QUE 1 FUNÇÃO DE TESTE. PROIBIDO TUDO FORA DE TESTES. LIMITE DE 700 TOKENS NA RESPOSTA. Resposta em português do Brasil
 
-      ''',
+    //  ''',
     // 'Refatoração': '''
     // Dada a seguinte descrição sobre refatoração:
 

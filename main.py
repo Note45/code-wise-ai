@@ -28,7 +28,7 @@ def count_tokens(text: str) -> int:
 
 
 # Inicializar Firebase
-cred = credentials.Certificate('sistema-gpt-engsoft-firebase-adminsdk-9a5h0-68bb5b1bc8.json')
+cred = credentials.Certificate('code-wise-ai-firebase-adminsdk-fbsvc-c775c40222.json')
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
@@ -52,7 +52,7 @@ logging.basicConfig(level=logging.INFO)
 
 # Configure a chave da API da OpenAI
 
-api_key = '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'  # Substitua 'YOUR_OPENAI_API_KEY' pela sua chave de API
+api_key = ''  # Substitua 'YOUR_OPENAI_API_KEY' pela sua chave de API
 # client = OpenAI(api_key=api_key)
 os.environ['OPENAI_API_KEY'] = api_key
 
@@ -92,11 +92,10 @@ conversation = ConversationChain(
 )
 
 MATRICULAS_PERMITIDAS = [
-    '20229004551', '20229006215', '20229004112', '20229011091', '20229019670',
-    '20219019597', '20229004598', '20229002181', '20229020690', '20229004515',
-    '20229021982', '20219035536', '20229001200', '20209063994', '20229011725',
-    '20229004177', '20229004239', '20229046275', '20229002931', '20229001406',
-    '20169020664', '20209053479', '20189007795', '20229004060'
+    '20189035495', '20229020161', '20239017929', '20229041199', '20229037481', '20229046088', 
+    '20219015687', '20229048091', '20229035718', '20229054400', '20229037490', '20209038347',
+    '20229038470', '20209050486', '20229037472', '20229046275', '20229053378', '20239006550',
+    '20229048430', '20229037919'
 ]
 
 class MockResponse:
@@ -271,10 +270,10 @@ async def send_prompt(prompt: Prompt):
     
     if last_prompt_time:
         last_prompt_time = last_prompt_time.replace(tzinfo=pytz.UTC).astimezone(pytz.timezone('America/Sao_Paulo'))
-
+    print('teste 1')
     # Calcular novas vidas com base no tempo do último prompt
     new_lives = calculate_lives(last_prompt_time, current_lives)
-    
+    print('teste 2')
     if new_lives <= 0:
         raise HTTPException(status_code=403, detail="Sem vidas no momento")
 
