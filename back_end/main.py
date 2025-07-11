@@ -28,7 +28,7 @@ def count_tokens(text: str) -> int:
 
 
 # Inicializar Firebase
-cred = credentials.Certificate('code-wise-ai-firebase-adminsdk-fbsvc-c775c40222.json')
+cred = credentials.Certificate('ADICIONA_SUA_CHAVE_FIRE_BASE')
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
