@@ -1,0 +1,12 @@
+pandas
+matplotlib
+seaborn
+scikit-learn
+nltk
+wordcloud
+scipy
+statsmodels
+networkx
+rake_nltk
+ace_tools
+ipykernel
